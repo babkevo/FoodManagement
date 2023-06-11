@@ -1,5 +1,5 @@
 # FoodManagement
-The food management application being developed is a web-based application using Flask, a Python web framework. It incorporates several programming languages and technologies to provide functionalities for managing food items and user authentication.
+The food management application am developing is a web-based application using Flask, a Python web framework. It incorporates several programming languages and technologies to provide functionalities for managing food items and user authentication.
 Programming Languages and Technologies Used:
 •	Python: The backend of the application is written in Python using the Flask framework.
 •	HTML: The structure and layout of the web pages are created using HTML.
@@ -15,5 +15,4 @@ Functionalities of the Food Management Application:
 5.	Expiration Date Validation: The application checks if the expiration date of a food item has passed and visually highlights it as expired.
 6.	Barcode Scanning: Users can scan barcodes of food items using the barcode scanner feature.
 7.	Display Inventory: The application displays a list of food items in the user's inventory, including their names, expiration dates, and actions to edit or delete them.
-8.	Search Supermarkets: Users can search for supermarkets using a search input and search button.
-9.	User Authentication: The application includes user registration, login, and logout functionality to ensure secure access to the system.
+8.	User Authentication: The application includes user registration, login, and logout functionality to ensure secure access to the system.

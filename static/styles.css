@@ -1,0 +1,178 @@
+/* styles.css */
+
+/* Body styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+
+
+}
+/* styles.css */
+
+.add-item-form {
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+}
+
+.edit-item-form {
+background-color: white;
+padding: 20px 20px 20px 20px;
+}
+
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Row styles */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Column styles */
+.col-6 {
+  width: 50%;
+  padding: 10px;
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inventory items styles */
+#inventory-items {
+  background-color: #f2f2f2;
+  background-image: url('../static/bck.jpg');
+  background-size: cover;
+  padding: 20px;
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
+  margin-top: 0;
+}
+
+table {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: rgb(4,44,84);
+  color: #fff;
+}
+
+a.btn {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+a.btn-primary {
+  background-color: #337ab7;
+}
+
+a.btn-info {
+  background-color: #5bc0de;
+}
+
+a.btn-danger {
+  background-color: red;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.float-image {
+  animation: floating 3s ease-in-out infinite;
+  max-width: 100%;
+  height: auto;
+}
+
+.plus-icon {
+  cursor: pointer;
+  position: relative;
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+    animation: vibrating 1s infinite linear;
+    color: white;
+}
+
+.information {
+  display: none;
+  background-color: white;
+  padding: 30px 30px 30px 30px;
+  color: black;
+
+}
+ @keyframes vibrating {
+    0% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(-2deg); }
+  }
+
+#scanner-bar{
+color: black;
+  }
+
+#scanner-button{
+  background-color: white;
+  color: black;
+  }
+
+.cart-icon {
+  color: black;
+}
+.to-buy-text{
+color:black;
+font-size: 20px;
+padding-top: 20px;
+}
+.expired{
+color: red;
+}
+
+
+  /* Styles for small screens */
+@media (max-width: 576px) {
+  .col-md-6 {
+    width: 100%;
+  }
+}
+
+/* Styles for medium-sized screens */
+@media (min-width: 576px) and (max-width: 992px) {
+  .col-md-6 {
+    width: 50%;
+  }
+}

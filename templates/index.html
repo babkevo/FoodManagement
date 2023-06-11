@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-6">
+      <div class="plus-icon" id="plus-icon">
+        <i class="fas fa-plus fa-3x"></i>
+      </div>
+
+      <div class="information" id="information">
+        <p>The food management application allows users to effectively manage their food inventory,
+          keep track of expiration dates, and perform actions such as adding, editing, and deleting food items and arranging the items
+          using drag and drop functionality. The incorporation of barcode scanning and supermarket search features adds convenience
+          and enhances the user experience.</p>
+      </div>
+
+      <img src="{{ url_for('static', filename='ai.png') }}" class="float-image">
+      <h1>FOOD MANAGEMENT APP</h1>
+    </div>
+
+    <div class="col-md-6" id="inventory-items">
+      <h2>Inventory Items</h2>
+
+      <a class="btn btn-primary mb-3" href="{{ url_for('add_item') }}">
+        <i class="fas fa-plus"></i>
+      </a>
+      <a class="btn btn-primary mb-3" id="scanner-button" href="#">
+        <i class="fas fa-barcode" id="scanner-bar"></i>
+        Scan Barcode
+      </a>
+
+      <table class="table sortable" id="sortable-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Expiration Date</th>
+            <th>Actions</th>
+            <th><i class="fas fa-grip-vertical"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+            <tr data-id="{{ item.id }}" {% if item.expiration_date < current_date %}class="expired"{% endif %}>
+              <td>{{ item.name }}</td>
+              <td>{% if item.expiration_date < current_date %}<s>{{ item.expiration_date }}</s>{% else %}{{ item.expiration_date }}{% endif %}</td>
+              <td>
+                <a href="{{ url_for('edit_item', id=item.id) }}"><i class="fas fa-edit"></i></a>
+                <a href="{{ url_for('delete_item', id=item.id) }}"><i class="fas fa-trash-alt"></i></a>
+              </td>
+              <td><i class="fas fa-grip-vertical"></i></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+<h2 class="to-buy-text"><i class="fas fa-shopping-cart cart-icon"></i> To Buy</h2>
+
+        <table class="table suggested-items-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item, quantity in suggested_items.items() %}
+            <tr>
+              <td>{{ item }}</td>
+              <td>{{ quantity }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Add the scanner placeholder element -->
+  <div id="scanner-result"></div>
+
+{% endblock %}

@@ -24,7 +24,7 @@ login_manager.login_view = 'login'  # Set the login view route
 @login_manager.user_loader
 def load_user(user_id):
     # Implement your logic to load the user from the database based on user_id
-    return User.query.get(int(user_id))  # Replace User with your user model
+    return User.query.get(int(user_id))  
 
 
 class FoodItem(db.Model):

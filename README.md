@@ -15,4 +15,4 @@ Functionalities of the Food Management Application:
 5.	Expiration Date Validation: The application checks if the expiration date of a food item has passed and visually highlights it as expired.
 6.	Barcode Scanning: Users can scan barcodes of food items using the barcode scanner feature.
 7.	Display Inventory: The application displays a list of food items in the user's inventory, including their names, expiration dates, and actions to edit or delete them.
-8.	User Authentication: The application includes user registration, login, and logout functionality to ensure secure access to the system.
+8.	Drag and drop to arrange the entries

@@ -1,4 +1,4 @@
-# FoodManagement
+# FoodManagement ON GOING PROJECT
 The food management application am developing is a web-based application using Flask, a Python web framework. It incorporates several programming languages and technologies to provide functionalities for managing food items and user authentication.
 Programming Languages and Technologies Used:
 •	Python: The backend of the application is written in Python using the Flask framework.
